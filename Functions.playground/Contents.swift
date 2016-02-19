@@ -50,3 +50,18 @@ func makeUpperCase(str1: String, inout _ str2: String, inout _ str3: String){
 makeUpperCase(string1,&string2,&string3)
 
 print(string1)
+
+func someFunction(firstParameterName: Int,sample: Int) -> Int{
+    return firstParameterName + sample
+}
+
+// laging kasama ung name ng parameter except sa first parameter for readability purpose
+someFunction(1,sample:2)
+
+// Omitting External Parameter Names
+// pag may underscore sa una ung other parameters except 1st parameter kahit wala na ung name
+func someOtherFunction(first: String, _ second: String) -> String{
+    return first+second
+}
+
+someOtherFunction("hello", "hi")
