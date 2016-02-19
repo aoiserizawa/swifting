@@ -51,6 +51,7 @@ makeUpperCase(string1,&string2,&string3)
 
 print(string1)
 
+<<<<<<< HEAD
 
 // Function Types as Return Types
 func stepForward(input: Int) -> Int {
@@ -84,3 +85,19 @@ func chooseStep(backwards: Bool) -> (Int) -> Int{
 
 
 
+=======
+func someFunction(firstParameterName: Int,sample: Int) -> Int{
+    return firstParameterName + sample
+}
+
+// laging kasama ung name ng parameter except sa first parameter for readability purpose
+someFunction(1,sample:2)
+
+// Omitting External Parameter Names
+// pag may underscore sa una ung other parameters except 1st parameter kahit wala na ung name
+func someOtherFunction(first: String, _ second: String) -> String{
+    return first+second
+}
+
+someOtherFunction("hello", "hi")
+>>>>>>> 83e1f8ba051017c0917e09a4c3261875f01853a1
