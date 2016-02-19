@@ -50,3 +50,37 @@ func makeUpperCase(str1: String, inout _ str2: String, inout _ str3: String){
 makeUpperCase(string1,&string2,&string3)
 
 print(string1)
+
+
+// Function Types as Return Types
+func stepForward(input: Int) -> Int {
+    return input+1
+}
+
+func stepBackward(input: Int) -> Int {
+    return input-1
+}
+
+func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
+    return backwards ? stepBackward : stepForward
+}
+
+var currentValue = 3
+let moveNearerToZero = chooseStepFunction(currentValue > 0)
+// moveNearerToZero now refers to the stepBackward() function
+
+print(moveNearerToZero(7))
+
+
+// Nested Function
+
+func chooseStep(backwards: Bool) -> (Int) -> Int{
+    func stepForward (input: Int) -> Int { return input + 1}
+    func stepBackward (input: Int) -> Int { return input - 1 }
+    
+    return backwards ? stepBackward : stepForward
+}
+
+
+
+
