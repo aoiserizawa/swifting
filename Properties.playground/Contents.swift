@@ -89,7 +89,12 @@ square.center = Point(x: 15.0, y: 15.0)
 
 struct Cpu{
     
-    var ghz = 0.0
+    var ghz: Double = 0.0
+    
+    mutating func overClock(overClockRate: Double){
+        print(self.ghz)
+        self.ghz = self.ghz * overClockRate
+    }
 }
 
 struct Ram{
@@ -119,6 +124,11 @@ class Phone{
             return speed
         }
     }
+    
+    static func name() -> String{
+        return "name of phone"
+    }
+    
 }
 
 let iphone = Phone(model:"iPhone", cpu: Cpu(ghz:4.0), ram: Ram(gb: 4))
@@ -128,10 +138,12 @@ print("iPhone Processor is: \(iphone.processor)")
 
 let galaxyS = Phone(model:"galaxyS", cpu: Cpu(ghz: 8.0), ram: Ram(gb: 3))
 
-
-
 galaxyS.cpu = Cpu(ghz: 8.0)
+
+galaxyS.cpu.overClock(2.0)
 
 print("Galaxy S Processor is: \(galaxyS.processor)")
 
+
+print(Phone.name())
 
