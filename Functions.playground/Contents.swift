@@ -51,7 +51,6 @@ makeUpperCase(string1,&string2,&string3)
 
 print(string1)
 
-<<<<<<< HEAD
 
 // Function Types as Return Types
 func stepForward(input: Int) -> Int {
@@ -85,7 +84,7 @@ func chooseStep(backwards: Bool) -> (Int) -> Int{
 
 
 
-=======
+
 func someFunction(firstParameterName: Int,sample: Int) -> Int{
     return firstParameterName + sample
 }
@@ -100,4 +99,4 @@ func someOtherFunction(first: String, _ second: String) -> String{
 }
 
 someOtherFunction("hello", "hi")
->>>>>>> 83e1f8ba051017c0917e09a4c3261875f01853a1
+
